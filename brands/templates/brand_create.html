@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Estoque BootCamp - Criar Marca
+{% endblock %}
+
+{% block content %}
+
+<div class="container mt-4">
+    <h3 class="mb-4">Criar Marca</h3>
+    <div class="card">
+        <div class="card-body">
+            <form method="post" action="{% url 'brand-create' %}">
+                <!-- sempre que criar um formulário com metódo 'post' obrigatório colocar o csrf_token -->
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button calss="btn btn-primary">Salvar Marca</button>
+            </form>
+        </div>
+    </div>
+    <a href="{% url 'brand-list' %}" class="btn btn-secondary mt-3">Cancelar</a>
+</div>
+
+{% endblock %}
