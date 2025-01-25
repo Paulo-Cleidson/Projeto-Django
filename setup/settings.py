@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framwork',
+    'rest_framework',
     'brands',
     'products',
     'categories',
@@ -58,7 +58,7 @@ ROOT_URLCONF = 'setup.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['setup/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
